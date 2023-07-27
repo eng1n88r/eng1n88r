@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![eng1n88r's GitHub stats](https://vercel-sooty-five-14.vercel.app/api?username=eng1n88r&theme=tokyonight&show_icons=true&count_private=true&hide=contribs)
+![eng1n88r's GitHub stats](https://vercel-git-main-eng1n88r.vercel.app/api?username=eng1n88r&theme=tokyonight&show_icons=true&count_private=true&hide=contribs )
