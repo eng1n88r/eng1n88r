@@ -23,3 +23,5 @@ I’m **Viktar Hushchynski**, a software engineer with almost two decades of exp
 
 ## 📫 Take a look around!  
 These public repositories offer a glimpse of what I’ve been experimenting with in my spare time. If you want to chat about real-world systems, scalable solutions, or IoT adventures, feel free to **reach out**!  
+
+🎮 For a quick break (or a bit of friendly competition), check out — [Battle Snakes](https://battle-snakes.com). Give it a spin and see if you can top the leaderboard! 🐍✨
