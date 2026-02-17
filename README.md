@@ -1,27 +1,27 @@
 # Hi there
 
-I’m **Viktar Hushchynski**, a software engineer with almost two decades of experience in turning caffeine into clean code (most of the time). When I’m not busy building scalable enterprise solutions or tinkering with cloud architectures, you can probably find me debugging something I swore “worked on my machine” or experimenting with IoT devices and firmware just to see what sparks.
+I'm **Viktar Hushchynski**, a software engineer with close to twenty years of experience. I spend most of my time building enterprise systems and cloud infrastructure, but I also get into IoT, hardware, and firmware on the side — I like knowing what's happening all the way down the stack.
 
 ![eng1n88r's GitHub stats](https://vercel-git-main-eng1n88r.vercel.app/api?username=eng1n88r&theme=tokyonight&show_icons=true&count_private=true&hide=contribs)
 
 ---
 
-## What I do:
-- **Design and build cloud-based solutions in Azure** ☁️  
-- **Architect RESTful APIs** because who doesn’t love a good API?  
-- **Tinker with IoT devices, hardware, and firmware** — because why settle for just writing software when you can mess with the hardware too?  
-- **Write code** that future me (hopefully) won’t regret.  
+## What I work on
+- Cloud architecture and solutions in Azure
+- RESTful API design
+- IoT devices, hardware, and firmware
+- Generally trying to write code I won't hate in six months
 
 ---
 
-## Fun facts:
-- My IoT projects range from _“functional and awesome”_ to _“why is it blinking like that?”_.  
-- I believe in _“works smarter, not just harder”_ — unless it’s 3 AM and the CI/CD pipeline is down.  
-- My GitHub stats may not be very impressive, but that’s only because the real magic is locked away in private repos, organization projects, and late-night experiments that never made it here.  
+## A few things worth mentioning
+- Most of my work lives in private repos and org projects, so what you see here is just side projects and experiments.
+- My IoT builds range from genuinely useful to "well, it was worth a shot."
+- I'm always up for a good conversation about systems design, scalability, or anything embedded.
 
 ---
 
-## Take a look around!  
-These public repositories offer a glimpse of what I’ve been experimenting with in my spare time. If you want to chat about real-world systems, scalable solutions, or IoT adventures, feel free to **reach out**!  
+## Have a look around
+These public repos are mostly things I've been playing with in my spare time. If anything catches your eye or you want to talk shop, feel free to reach out.
 
-For a quick break (or a bit of friendly competition), check out — [Battle Snakes](https://battle-snakes.com). Give it a spin and see if you can top the leaderboard!
+Also, if you're up for it — check out [Battle Snakes](https://battle-snakes.com). It's a fun one.
