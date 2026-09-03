@@ -14,7 +14,7 @@
 
 ### CONTRIBUTION GRID
 
-<a href="https://battle-snakes.com"><img src="assets/neon/snake.svg" alt="Snake eating the contribution grid. Click for Battle Snakes." width="100%"></a>
+<a href="https://battle-snakes.com" target="_blank" rel="noopener"><img src="assets/neon/snake.svg" alt="Snake eating the contribution grid. Click for Battle Snakes." width="100%"></a>
 
 <img src="assets/neon/calendar.svg" alt="Contribution graph" width="100%">
 
@@ -32,6 +32,6 @@ side projects and the occasional experiment that outgrew a weekend.
 
 <div align="center">
 
-[codenerd.llc](https://codenerd.llc) &nbsp;·&nbsp; [@copelandsoftware](https://github.com/copelandsoftware) &nbsp;·&nbsp; [Battle Snakes](https://battle-snakes.com)
+[codenerd.llc](https://codenerd.llc) &nbsp;·&nbsp; [@copelandsoftware](https://github.com/copelandsoftware) &nbsp;·&nbsp; <a href="https://battle-snakes.com" target="_blank" rel="noopener">Battle Snakes</a>
 
 </div>
