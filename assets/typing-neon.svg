@@ -6,20 +6,20 @@
     </filter>
     <clipPath id="c0"><rect x="44" y="10" height="32" width="283.8">
       <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
-        keyTimes="0;0;0.0928;0.18362;0.21868;1" values="0;0;283.8;283.8;0;0"/>
-    </rect></clipPath>
+        keyTimes="0;0.09083;0.12588;0.9072;1"
+        values="283.8;283.8;0;0;283.8"/></rect></clipPath>
     <clipPath id="c1"><rect x="44" y="10" height="32" width="0">
       <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
-        keyTimes="0;0.23063;0.3656;0.45643;0.50742;1" values="0;0;412.8;412.8;0;0"/>
-    </rect></clipPath>
+        keyTimes="0;0.13783;0.27281;0.36363;0.41463;1"
+        values="0;0;412.8;412.8;0;0"/></rect></clipPath>
     <clipPath id="c2"><rect x="44" y="10" height="32" width="0">
       <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
-        keyTimes="0;0.51937;0.61779;0.70862;0.7458;1" values="0;0;301;301;0;0"/>
-    </rect></clipPath>
+        keyTimes="0;0.42658;0.525;0.61582;0.653;1"
+        values="0;0;301;301;0;0"/></rect></clipPath>
     <clipPath id="c3"><rect x="44" y="10" height="32" width="0">
       <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
-        keyTimes="0;0.75775;0.85898;0.94981;0.98805;1" values="0;0;309.6;309.6;0;0"/>
-    </rect></clipPath>
+        keyTimes="0;0.66495;0.76618;0.85701;0.89525;1"
+        values="0;0;309.6;309.6;0;0"/></rect></clipPath>
   </defs>
 
   <rect width="900" height="52" rx="6" fill="#0A0416" stroke="#2A1B4D"/>
@@ -37,7 +37,7 @@
 
   <rect y="19" width="9" height="18" fill="#00F0FF" x="327.8">
     <animate attributeName="x" dur="20.91895s" repeatCount="indefinite"
-      keyTimes="0;0;0.0928;0.18362;0.21868;0.23063;0.3656;0.45643;0.50742;0.51937;0.61779;0.70862;0.7458;0.75775;0.85898;0.94981;0.98805;1" values="44;44;327.8;327.8;44;44;456.8;456.8;44;44;345;345;44;44;353.6;353.6;44;44"/>
+      keyTimes="0;0.09083;0.12588;0.13783;0.27281;0.36363;0.41463;0.42658;0.525;0.61582;0.653;0.66495;0.76618;0.85701;0.89525;0.9072;1" values="327.8;327.8;44;44;456.8;456.8;44;44;345;345;44;44;353.6;353.6;44;44;327.8"/>
     <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
       keyTimes="0;0.49;0.5;0.99;1" values="1;1;0.1;0.1;1"/>
   </rect>
