@@ -2,7 +2,7 @@
 
 <img src="assets/banner-neon.svg" alt="Viktar Hushchynski, Senior Software Engineer" width="100%">
 
-<img src="assets/tagline-neon.svg" alt="Twenty years of building software" width="900">
+<img src="assets/typing-neon.svg" alt="Twenty years of building software" width="900">
 
 <br>
 
