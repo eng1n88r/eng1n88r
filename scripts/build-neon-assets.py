@@ -165,7 +165,7 @@ def build_stack(fonts, out):
     total = sum(c[1] for c in chips) + GAP * (len(chips) - 1)
     x = (W - total) / 2
 
-    accents = [AQUA, MAGENTA, CORAL]
+    accents = [AQUA]
     parts = []
     for i, ((text, tw), (_, cw)) in enumerate(zip(labels, chips)):
         accent = accents[i % len(accents)]
