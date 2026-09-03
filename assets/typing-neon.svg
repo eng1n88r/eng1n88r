@@ -1,21 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="48" viewBox="0 0 900 48" fill="none" role="img" aria-label="Twenty years of building software.">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="48" viewBox="0 0 900 48" role="img" aria-label="Twenty years of building software.">
   <defs>
-    <clipPath id="c0"><rect x="254.5" y="4" height="40" width="391">
+    <clipPath id="c0"><rect x="242.5" y="2" height="44" width="415">
       <animate attributeName="width" dur="20.18954s" repeatCount="indefinite"
-        keyTimes="0;0.09411;0.13153;0.90094;1"
-        values="391;391;0;0;391"/></rect></clipPath>
-    <clipPath id="c1"><rect x="243" y="4" height="40" width="0">
+        keyTimes="0;0.09411;0.13153;0.90094;1" values="415;415;0;0;415"/></rect></clipPath>
+    <clipPath id="c1"><rect x="231" y="2" height="44" width="0">
       <animate attributeName="width" dur="20.18954s" repeatCount="indefinite"
-        keyTimes="0;0.14391;0.2488;0.34291;0.38253;1"
-        values="0;0;414;414;0;0"/></rect></clipPath>
-    <clipPath id="c2"><rect x="243" y="4" height="40" width="0">
+        keyTimes="0;0.14391;0.2488;0.34291;0.38253;1" values="0;0;438;438;0;0"/></rect></clipPath>
+    <clipPath id="c2"><rect x="231" y="2" height="44" width="0">
       <animate attributeName="width" dur="20.18954s" repeatCount="indefinite"
-        keyTimes="0;0.39492;0.49981;0.59391;0.63354;1"
-        values="0;0;414;414;0;0"/></rect></clipPath>
-    <clipPath id="c3"><rect x="237.25" y="4" height="40" width="0">
+        keyTimes="0;0.39492;0.49981;0.59391;0.63354;1" values="0;0;438;438;0;0"/></rect></clipPath>
+    <clipPath id="c3"><rect x="225.25" y="2" height="44" width="0">
       <animate attributeName="width" dur="20.18954s" repeatCount="indefinite"
-        keyTimes="0;0.64592;0.75372;0.84783;0.88856;1"
-        values="0;0;425.5;425.5;0;0"/></rect></clipPath>
+        keyTimes="0;0.64592;0.75372;0.84783;0.88856;1" values="0;0;449.5;449.5;0;0"/></rect></clipPath>
   </defs>
 
   <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" font-weight="700" fill="#00F0FF">
@@ -29,9 +25,9 @@
       textLength="425.5" lengthAdjust="spacingAndGlyphs">Firmware when a project calls for it.</text></g>
   </g>
 
-  <rect y="12" width="11" height="24" fill="#00F0FF" x="645.5">
+  <rect y="12" width="11" height="24" fill="#00F0FF" x="650.5">
     <animate attributeName="x" dur="20.18954s" repeatCount="indefinite"
-      keyTimes="0;0.09411;0.13153;0.14391;0.2488;0.34291;0.38253;0.39492;0.49981;0.59391;0.63354;0.64592;0.75372;0.84783;0.88856;0.90094;1" values="645.5;645.5;254.5;243;657;657;243;243;657;657;243;237.25;662.75;662.75;237.25;254.5;645.5"/>
+      keyTimes="0;0.09411;0.13153;0.14391;0.2488;0.34291;0.38253;0.39492;0.49981;0.59391;0.63354;0.64592;0.75372;0.84783;0.88856;0.90094;1" values="650.5;650.5;254.5;243;662;662;243;243;662;662;243;237.25;667.75;667.75;237.25;254.5;650.5"/>
     <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
       keyTimes="0;0.49;0.5;0.99;1" values="1;1;0.15;0.15;1"/>
   </rect>
