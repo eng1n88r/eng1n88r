@@ -18,8 +18,8 @@
 
 <img src="assets/neon/contrib-3d.svg" alt="Contribution graph" width="100%">
 
-<img src="assets/neon/stats.svg" alt="GitHub statistics" height="170">
-<img src="assets/neon/langs.svg" alt="Most used languages" height="170">
+<img src="assets/neon/stats.svg" alt="GitHub statistics">
+<img src="assets/neon/langs.svg" alt="Most used languages">
 
 </div>
 

@@ -82,7 +82,7 @@ jobs:
           get langs-dark.svg  "/api/top-langs?$user&$langs&$dark&custom_title=Languages"
           get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
           get neon/stats.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
-          get neon/langs.svg  "/api/top-langs?$user&layout=donut&langs_count=8&hide=html,css&$neon&custom_title=STACK"
+          get neon/langs.svg  "/api/top-langs?$user&$langs&card_width=467&$neon&custom_title=STACK"
 
       - name: Reject error cards
         run: |
