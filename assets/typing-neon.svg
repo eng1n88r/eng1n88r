@@ -4,41 +4,40 @@
       <feGaussianBlur stdDeviation="2.2" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-        <clipPath id="c0"><rect x="44" y="10" height="32" width="0">
-      <animate attributeName="width" dur="13.6s" repeatCount="indefinite"
-        keyTimes="0;0;0.085;0.215;0.25;1"
-        values="0;0;283.8;283.8;0;0"/></rect></clipPath>
+    <clipPath id="c0"><rect x="44" y="10" height="32" width="0">
+      <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
+        keyTimes="0;0;0.0928;0.18362;0.21868;1" values="0;0;283.8;283.8;0;0"/>
+    </rect></clipPath>
     <clipPath id="c1"><rect x="44" y="10" height="32" width="0">
-      <animate attributeName="width" dur="13.6s" repeatCount="indefinite"
-        keyTimes="0;0.25;0.335;0.465;0.5;1"
-        values="0;0;412.8;412.8;0;0"/></rect></clipPath>
+      <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
+        keyTimes="0;0.23063;0.3656;0.45643;0.50742;1" values="0;0;412.8;412.8;0;0"/>
+    </rect></clipPath>
     <clipPath id="c2"><rect x="44" y="10" height="32" width="0">
-      <animate attributeName="width" dur="13.6s" repeatCount="indefinite"
-        keyTimes="0;0.5;0.585;0.715;0.75;1"
-        values="0;0;301;301;0;0"/></rect></clipPath>
+      <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
+        keyTimes="0;0.51937;0.61779;0.70862;0.7458;1" values="0;0;301;301;0;0"/>
+    </rect></clipPath>
     <clipPath id="c3"><rect x="44" y="10" height="32" width="0">
-      <animate attributeName="width" dur="13.6s" repeatCount="indefinite"
-        keyTimes="0;0.75;0.835;0.965;1;1"
-        values="0;0;309.6;309.6;0;0"/></rect></clipPath>
+      <animate attributeName="width" dur="20.91895s" repeatCount="indefinite"
+        keyTimes="0;0.75775;0.85898;0.94981;0.98805;1" values="0;0;309.6;309.6;0;0"/>
+    </rect></clipPath>
   </defs>
 
   <rect width="900" height="52" rx="6" fill="#0A0416" stroke="#2A1B4D"/>
   <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="15">
-    <text x="22" y="32" fill="#FF2E97">&gt;</text>
-<g clip-path="url(#c0)"><text x="44" y="32" textLength="283.8"
-      lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">twenty years of building software</text></g>
-<g clip-path="url(#c1)"><text x="44" y="32" textLength="412.8"
-      lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">enterprise systems and cloud architecture by day</text></g>
-<g clip-path="url(#c2)"><text x="44" y="32" textLength="301"
-      lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">rust, go and linux tooling by night</text></g>
-<g clip-path="url(#c3)"><text x="44" y="32" textLength="309.6"
-      lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">firmware when a project calls for it</text></g>
+      <text x="22" y="32" fill="#FF2E97">&gt;</text>
+      <g clip-path="url(#c0)"><text x="44" y="32" textLength="283.8"
+        lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">twenty years of building software</text></g>
+      <g clip-path="url(#c1)"><text x="44" y="32" textLength="412.8"
+        lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">enterprise systems and cloud architecture by day</text></g>
+      <g clip-path="url(#c2)"><text x="44" y="32" textLength="301"
+        lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">rust, go and linux tooling by night</text></g>
+      <g clip-path="url(#c3)"><text x="44" y="32" textLength="309.6"
+        lengthAdjust="spacingAndGlyphs" fill="#8FE9FF" filter="url(#gl)">firmware when a project calls for it</text></g>
   </g>
 
   <rect y="19" width="9" height="18" fill="#00F0FF" x="44">
-    <animate attributeName="x" dur="13.6s" repeatCount="indefinite"
-      keyTimes="0;0;0.085;0.215;0.25;0.25;0.335;0.465;0.5;0.5;0.585;0.715;0.75;0.75;0.835;0.965;1;1"
-      values="44;44;327.8;327.8;44;44;456.8;456.8;44;44;345;345;44;44;353.6;353.6;44;44"/>
+    <animate attributeName="x" dur="20.91895s" repeatCount="indefinite"
+      keyTimes="0;0;0.0928;0.18362;0.21868;0.23063;0.3656;0.45643;0.50742;0.51937;0.61779;0.70862;0.7458;0.75775;0.85898;0.94981;0.98805;1" values="44;44;327.8;327.8;44;44;456.8;456.8;44;44;345;345;44;44;353.6;353.6;44;44"/>
     <animate attributeName="opacity" dur="1s" repeatCount="indefinite"
       keyTimes="0;0.49;0.5;0.99;1" values="1;1;0.1;0.1;1"/>
   </rect>
