@@ -4,15 +4,7 @@
 
 <img src="assets/typing-neon.svg" alt="Twenty years of building software" width="900">
 
-<br>
-
-![Azure](https://img.shields.io/badge/Azure-0B1220?style=for-the-badge&logoColor=00F0FF&labelColor=05010D&color=0B1220)
-![.NET](https://img.shields.io/badge/.NET-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
-![Rust](https://img.shields.io/badge/Rust-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
-![Go](https://img.shields.io/badge/Go-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
-![TypeScript](https://img.shields.io/badge/TypeScript-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
-![Linux](https://img.shields.io/badge/Linux-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
-![ESP32](https://img.shields.io/badge/ESP32-0B1220?style=for-the-badge&labelColor=05010D&color=0B1220)
+<img src="assets/stack-neon.svg" alt="Azure, .NET, C#, Rust, Go, TypeScript, Linux, ESP32" width="900">
 
 </div>
 

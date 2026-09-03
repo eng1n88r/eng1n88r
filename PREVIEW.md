@@ -36,3 +36,19 @@ result. It needs a `PROFILE_TOKEN` repository secret: a classic PAT with `repo` 
 `read:user`. The workflow's own `GITHUB_TOKEN` cannot reach the stats GraphQL API — it
 comes back "Resource not accessible by integration" and renders an error card, so the
 job now checks for that and fails rather than committing it.
+
+## Typography and palette
+
+Lettering is Chakra Petch, converted to outlines by `scripts/build-neon-assets.py`.
+A webfont cannot load inside an SVG that GitHub serves as an `<img>` — raw.githubusercontent.com
+sends `default-src 'none'`, which blocks `@import` and data-URI `@font-face` alike — and naming
+the family in `font-family` only works for viewers who happen to have it installed. Outlines
+travel with the file. Chakra Petch is OFL-licensed; the licence is in `assets/fonts/`.
+
+Colours follow the GTA VI marketing palette: a Miami sunset (gold `#FFC24B`, orange `#FF9142`,
+pink `#FF3D7F`, magenta `#C42A8E`) over deep violet night (`#0B0518`, `#1A0B33`), with teal
+`#37D6C4` as the single cool accent.
+
+Re-run after editing copy or colours:
+
+    scripts/build-neon-assets.py --fonts <dir with ChakraPetch-*.ttf>
