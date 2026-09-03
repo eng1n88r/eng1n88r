@@ -32,6 +32,6 @@ side projects and the occasional experiment that outgrew a weekend.
 
 <div align="center">
 
-Saint Johns, FL &nbsp;·&nbsp; [codenerd.llc](https://codenerd.llc) &nbsp;·&nbsp; [@copelandsoftware](https://github.com/copelandsoftware) &nbsp;·&nbsp; [Battle Snakes](https://battle-snakes.com)
+[codenerd.llc](https://codenerd.llc) &nbsp;·&nbsp; [@copelandsoftware](https://github.com/copelandsoftware) &nbsp;·&nbsp; [Battle Snakes](https://battle-snakes.com)
 
 </div>
