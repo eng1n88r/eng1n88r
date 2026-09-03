@@ -81,7 +81,7 @@ jobs:
           get stats-light.svg "/api?$user&$stats&$light&custom_title=Signal"
           get langs-dark.svg  "/api/top-langs?$user&$langs&$dark&custom_title=Languages"
           get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
-          get neon/stats.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
+          get neon/system-stats.svg "/api?$user&$stats&line_height=29&$neon&custom_title=SYSTEM%20STATS"
           get neon/languages.svg  "/api/top-langs?$user&$langs&card_width=467&$neon&custom_title=STACK"
 
       - name: Reject error cards
@@ -99,7 +99,7 @@ jobs:
       - name: Bake animation end-states
         run: |
           python3 scripts/bake-svg-animations.py \
-            assets/stats-dark.svg assets/stats-light.svg assets/neon/stats.svg \
+            assets/stats-dark.svg assets/stats-light.svg assets/neon/system-stats.svg \
             assets/langs-dark.svg assets/langs-light.svg assets/neon/languages.svg
 
       - name: Strip the snake's progress bar
