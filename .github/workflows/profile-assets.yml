@@ -54,7 +54,7 @@ jobs:
           github_token: ${{ env.GH_STATS_TOKEN }}
           outputs: |
             assets/snake-hud.svg?color_snake=%235EEAD4&color_dots=%230d1117,%23134e4a,%230e7490,%2306b6d4,%235eead4
-            assets/snake-neon.svg?color_snake=%2300F0FF&color_dots=%23150a2e,%234c1d95,%237c3aed,%23c026d3,%23ff2e97
+            assets/neon/snake.svg?color_snake=%2300F0FF&color_dots=%23150a2e,%234c1d95,%237c3aed,%23c026d3,%23ff2e97
 
       - name: Stat cards
         env:
@@ -81,8 +81,8 @@ jobs:
           get stats-light.svg "/api?$user&$stats&$light&custom_title=Signal"
           get langs-dark.svg  "/api/top-langs?$user&$langs&$dark&custom_title=Languages"
           get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
-          get stats-neon.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
-          get langs-neon.svg  "/api/top-langs?$user&layout=donut&langs_count=8&hide=html,css&$neon&custom_title=STACK"
+          get neon/stats.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
+          get neon/langs.svg  "/api/top-langs?$user&layout=donut&langs_count=8&hide=html,css&$neon&custom_title=STACK"
 
       - name: Reject error cards
         run: |
@@ -99,15 +99,15 @@ jobs:
       - name: Bake animation end-states
         run: |
           python3 scripts/bake-svg-animations.py \
-            assets/stats-dark.svg assets/stats-light.svg assets/stats-neon.svg \
-            assets/langs-dark.svg assets/langs-light.svg assets/langs-neon.svg
+            assets/stats-dark.svg assets/stats-light.svg assets/neon/stats.svg \
+            assets/langs-dark.svg assets/langs-light.svg assets/neon/langs.svg
 
       - name: Strip the snake's progress bar
-        run: python3 scripts/strip-snake-progressbar.py assets/snake-hud.svg assets/snake-neon.svg
+        run: python3 scripts/strip-snake-progressbar.py assets/snake-hud.svg assets/neon/snake.svg
 
       - name: Place calendar output
         run: |
-          cp profile-3d-contrib/profile-night-rainbow.svg assets/contrib-3d-neon.svg
+          cp profile-3d-contrib/profile-night-rainbow.svg assets/neon/contrib-3d.svg
           cp profile-3d-contrib/profile-night-view.svg assets/contrib-3d.svg
           rm -rf profile-3d-contrib
 

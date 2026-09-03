@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/banner-neon.svg" alt="Viktar Hushchynski, Senior Software Engineer" width="100%">
+<img src="assets/neon/banner.svg" alt="Viktar Hushchynski, Senior Software Engineer" width="100%">
 
-<img src="assets/typing-neon.svg" alt="Twenty years of building software" width="900">
+<img src="assets/neon/typing.svg" alt="Twenty years of building software" width="900">
 
-<img src="assets/stack-neon.svg" alt="Azure, .NET, C#, Rust, Go, TypeScript, Linux, ESP32" width="900">
+<img src="assets/neon/stack.svg" alt="Azure, .NET, C#, Rust, Go, TypeScript, Linux, ESP32" width="900">
 
 </div>
 
@@ -14,12 +14,12 @@
 
 ### CONTRIBUTION GRID
 
-<img src="assets/snake-neon.svg" alt="Snake eating the contribution grid" width="100%">
+<img src="assets/neon/snake.svg" alt="Snake eating the contribution grid" width="100%">
 
-<img src="assets/contrib-3d-neon.svg" alt="Contribution graph" width="100%">
+<img src="assets/neon/contrib-3d.svg" alt="Contribution graph" width="100%">
 
-<img src="assets/stats-neon.svg" alt="GitHub statistics" height="170">
-<img src="assets/langs-neon.svg" alt="Most used languages" height="170">
+<img src="assets/neon/stats.svg" alt="GitHub statistics" height="170">
+<img src="assets/neon/langs.svg" alt="Most used languages" height="170">
 
 </div>
 

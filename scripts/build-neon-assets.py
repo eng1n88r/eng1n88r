@@ -279,11 +279,11 @@ def main():
     ap.add_argument("--out", default=Path("assets"), type=Path)
     a = ap.parse_args()
 
-    n = build_banner(a.fonts, a.out / "banner-neon.svg")
+    n = build_banner(a.fonts, a.out / "neon" / "banner.svg")
     print(f"banner-neon.svg  {n:>7} bytes")
-    n, loop, widest = build_typing(a.fonts, a.out / "typing-neon.svg")
+    n, loop, widest = build_typing(a.fonts, a.out / "neon" / "typing.svg")
     print(f"typing-neon.svg  {n:>7} bytes  loop={loop:.1f}s  widest phrase={widest:.0f}px")
-    n, row = build_stack(a.fonts, a.out / "stack-neon.svg")
+    n, row = build_stack(a.fonts, a.out / "neon" / "stack.svg")
     print(f"stack-neon.svg   {n:>7} bytes  row width={row:.0f}px")
 
 
