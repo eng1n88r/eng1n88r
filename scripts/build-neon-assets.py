@@ -17,18 +17,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from text_to_path import measure, to_path  # noqa: E402
 
-# GTA VI marketing palette: Miami sunset over a deep violet night.
-NIGHT = "#0B0518"
-DEEP = "#1A0B33"
-PURPLE = "#4B1D80"
-MAGENTA = "#C42A8E"
-PINK = "#FF3D7F"
-CORAL = "#FF6B4A"
-ORANGE = "#FF9142"
-GOLD = "#FFC24B"
-AQUA = "#37D6C4"
-LILAC = "#E8D9F0"
-MUTED = "#9C8AB8"
+# Synthwave: cyan and magenta over near-black violet.
+NIGHT = "#05010D"
+DEEP = "#0F0620"
+PURPLE = "#7C3AED"
+MAGENTA = "#FF2E97"
+PINK = "#FF2E97"
+CORAL = "#A855F7"
+ORANGE = "#7DD3FC"
+GOLD = "#FFD166"
+AQUA = "#00F0FF"
+LILAC = "#B9C4D4"
+MUTED = "#6B7280"
+WHITE = "#F4F0FF"
 
 NAME = "VIKTAR HUSHCHYNSKI"
 KICKER = "SYSTEM ONLINE"
@@ -82,9 +83,8 @@ def build_banner(fonts, out):
   <defs>
     <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="{GOLD}"/>
-      <stop offset="42%" stop-color="{ORANGE}"/>
-      <stop offset="78%" stop-color="{PINK}"/>
-      <stop offset="100%" stop-color="{MAGENTA}"/>
+      <stop offset="45%" stop-color="{PINK}"/>
+      <stop offset="100%" stop-color="{PURPLE}"/>
     </linearGradient>
     <linearGradient id="letters" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="{GOLD}"/>
@@ -119,7 +119,7 @@ def build_banner(fonts, out):
     <rect width="{W}" height="{H}" fill="{DEEP}" opacity="0.65"/>
     <ellipse cx="600" cy="150" rx="640" ry="205" fill="url(#halo)"/>
 
-    <circle cx="600" cy="162" r="74" fill="url(#sunset)" opacity="0.62" filter="url(#soft)"/>
+    <circle cx="600" cy="192" r="62" fill="url(#sunset)" opacity="0.55" filter="url(#soft)"/>
 
     <g clip-path="url(#below)" stroke="url(#floor)" stroke-width="1" fill="none">
       {rays}
@@ -128,7 +128,7 @@ def build_banner(fonts, out):
     <line x1="0" y1="{VY}" x2="{W}" y2="{VY}" stroke="{PINK}" stroke-width="1.4" opacity="0.7" filter="url(#soft)"/>
 
     <rect width="{W}" height="{H}" fill="url(#scan)"/>
-    <rect x="0" y="0" width="{W}" height="26" fill="{GOLD}" opacity="0.06">
+    <rect x="0" y="0" width="{W}" height="26" fill="{AQUA}" opacity="0.07">
       <animate attributeName="y" values="-30;{H}" dur="5s" repeatCount="indefinite"/>
     </rect>
 
@@ -141,7 +141,7 @@ def build_banner(fonts, out):
       <path d="{tidy(name_d)}" fill="{AQUA}" opacity="0.45" transform="translate(2.5,0)">
         <animate attributeName="transform" values="translate(2.5,0);translate(7,0);translate(-1,0);translate(2.5,0);translate(2.5,0);translate(2.5,0);translate(2.5,0);translate(2.5,0)" dur="4.5s" repeatCount="indefinite"/>
       </path>
-      <path d="{tidy(name_d)}" fill="url(#letters)" filter="url(#glow)"/>
+      <path d="{tidy(name_d)}" fill="{WHITE}" filter="url(#glow)"/>
     </g>
 
     <path d="{tidy(sub_d)}" fill="{LILAC}" opacity="0.92"/>
@@ -165,7 +165,7 @@ def build_stack(fonts, out):
     total = sum(c[1] for c in chips) + GAP * (len(chips) - 1)
     x = (W - total) / 2
 
-    accents = [GOLD, ORANGE, PINK, MAGENTA]
+    accents = [AQUA, MAGENTA, CORAL]
     parts = []
     for i, ((text, tw), (_, cw)) in enumerate(zip(labels, chips)):
         accent = accents[i % len(accents)]
@@ -246,7 +246,7 @@ def build_typing(fonts, out):
     pts += [(marks[0]["retype_start"], left[0]), (LOOP, end(0))]
 
     bodies = "\n".join(
-        f'    <g clip-path="url(#t{i})"><path d="{paths[i]}" fill="url(#line)"/></g>'
+        f'    <g clip-path="url(#t{i})"><path d="{paths[i]}" fill="{AQUA}"/></g>'
         for i in range(len(PHRASES)))
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{PHRASES[0]}">
@@ -261,7 +261,7 @@ def build_typing(fonts, out):
 
 {bodies}
 
-  <rect y="13" width="{CUR_W}" height="23" fill="{PINK}" x="{fmt(end(0))}">
+  <rect y="13" width="{CUR_W}" height="23" fill="{AQUA}" x="{fmt(end(0))}">
     <animate attributeName="x" dur="{fmt(LOOP)}s" repeatCount="indefinite"
       keyTimes="{kt([p[0] / LOOP for p in pts])}" values="{';'.join(fmt(p[1]) for p in pts)}"/>
     <animate attributeName="opacity" dur="1s" repeatCount="indefinite"

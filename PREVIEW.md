@@ -45,9 +45,7 @@ sends `default-src 'none'`, which blocks `@import` and data-URI `@font-face` ali
 the family in `font-family` only works for viewers who happen to have it installed. Outlines
 travel with the file. Chakra Petch is OFL-licensed; the licence is in `assets/fonts/`.
 
-Colours follow the GTA VI marketing palette: a Miami sunset (gold `#FFC24B`, orange `#FF9142`,
-pink `#FF3D7F`, magenta `#C42A8E`) over deep violet night (`#0B0518`, `#1A0B33`), with teal
-`#37D6C4` as the single cool accent.
+Colours: cyan `#00F0FF` and magenta `#FF2E97` over near-black violet `#05010D`, with violet `#7C3AED` as the mid-tone.
 
 Re-run after editing copy or colours:
 
