@@ -1,0 +1,11 @@
+{
+  "type": "normal",
+  "fileName": "profile-gta6.svg",
+  "backgroundColor": "#0B0518",
+  "foregroundColor": "#E8D9F0",
+  "strongColor": "#FFC24B",
+  "weakColor": "#9C8AB8",
+  "radarColor": "#FF3D7F",
+  "growingAnimation": true,
+  "contribColors": ["#180D2E", "#4B1D80", "#A02A8C", "#FF3D7F", "#FFA34B"]
+}
