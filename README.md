@@ -1,27 +1,37 @@
-# Hi there
+<div align="center">
 
-I'm **Viktar Hushchynski**, a software engineer with close to twenty years of experience. I spend most of my time building enterprise systems and cloud infrastructure, but I also get into IoT, hardware, and firmware on the side — I like knowing what's happening all the way down the stack.
+<img src="assets/neon/banner.svg" alt="Viktar Hushchynski, Senior Software Engineer" width="100%">
 
-![eng1n88r's GitHub stats](https://vercel-git-main-eng1n88r.vercel.app/api?username=eng1n88r&theme=tokyonight&show_icons=true&count_private=true&hide=contribs)
+<img src="assets/neon/typing.svg" alt="Twenty years of building software" width="900">
 
----
+<img src="assets/neon/stack.svg" alt="Azure, .NET, C#, Rust, Go, TypeScript, Linux, ESP32" width="900">
 
-## What I work on
-- Cloud architecture and solutions in Azure
-- RESTful API design
-- IoT devices, hardware, and firmware
-- Generally trying to write code I won't hate in six months
+</div>
 
 ---
 
-## A few things worth mentioning
-- Most of my work lives in private repos and org projects, so what you see here is just side projects and experiments.
-- My IoT builds range from genuinely useful to "well, it was worth a shot."
-- I'm always up for a good conversation about systems design, scalability, or anything embedded.
+<div align="center">
+
+### CONTRIBUTION GRID
+
+<a href="https://battle-snakes.com"><img src="assets/neon/snake.svg" alt="Snake eating the contribution grid. Click for Battle Snakes." width="100%"></a>
+
+<img src="assets/neon/calendar-3d.svg" alt="Contribution graph" width="100%">
+
+<img src="assets/neon/system-stats.svg" alt="GitHub statistics">
+<img src="assets/neon/languages.svg" alt="Most used languages">
+
+</div>
 
 ---
 
-## Have a look around
-These public repos are mostly things I've been playing with in my spare time. If anything catches your eye or you want to talk shop, feel free to reach out.
+Most of my work lives in private repos and org projects. What is public here is
+side projects and the occasional experiment that outgrew a weekend.
 
-Also, if you're up for it — check out [Battle Snakes](https://battle-snakes.com). It's a fun one.
+---
+
+<div align="center">
+
+[codenerd.llc](https://codenerd.llc) &nbsp;·&nbsp; [@copelandsoftware](https://github.com/copelandsoftware) &nbsp;·&nbsp; [Battle Snakes](https://battle-snakes.com)
+
+</div>

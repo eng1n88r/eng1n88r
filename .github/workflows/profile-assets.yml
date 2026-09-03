@@ -54,7 +54,6 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ env.GH_STATS_TOKEN }}
           outputs: |
-            assets/snake-hud.svg?color_snake=%235EEAD4&color_dots=%230d1117,%23134e4a,%230e7490,%2306b6d4,%235eead4
             assets/neon/snake.svg?color_snake=%2300F0FF&color_dots=%23150a2e,%234c1d95,%237c3aed,%23c026d3,%23ff2e97
 
       - name: Stat cards
@@ -71,17 +70,11 @@ jobs:
           done
 
           user="username=${{ github.repository_owner }}&count_private=true&include_all_commits=true"
-          dark="bg_color=0D1117&title_color=5EEAD4&text_color=C9D1D9&icon_color=A78BFA&border_color=1F2937"
-          light="bg_color=FFFFFF&title_color=0E7490&text_color=24292F&icon_color=6D28D9&border_color=D0D7DE"
           neon="bg_color=05010D&title_color=FF2E97&text_color=B9C4D4&icon_color=00F0FF&border_color=2A1B4D"
           stats="show_icons=true&hide=contribs&rank_icon=percentile"
           langs="layout=compact&langs_count=8&hide=html,css"
 
           get() { curl -sf --retry 3 --max-time 60 "http://127.0.0.1:9000$2" -o "assets/$1"; }
-          get stats-dark.svg  "/api?$user&$stats&$dark&custom_title=Signal"
-          get stats-light.svg "/api?$user&$stats&$light&custom_title=Signal"
-          get langs-dark.svg  "/api/top-langs?$user&$langs&$dark&custom_title=Languages"
-          get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
           get neon/system-stats.svg "/api?$user&$stats&line_height=29&$neon&custom_title=SYSTEM%20STATS"
           get neon/languages.svg  "/api/top-langs?$user&$langs&card_width=467&$neon&custom_title=STACK"
 
@@ -89,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           bad=0
-          for f in assets/stats-*.svg assets/langs-*.svg; do
+          for f in assets/neon/system-stats.svg assets/neon/languages.svg; do
             if grep -q "Something went wrong" "$f"; then
               echo "::error::$f rendered as an error card"
               bad=1
@@ -99,18 +92,15 @@ jobs:
 
       - name: Bake animation end-states
         run: |
-          python3 scripts/bake-svg-animations.py \
-            assets/stats-dark.svg assets/stats-light.svg assets/neon/system-stats.svg \
-            assets/langs-dark.svg assets/langs-light.svg assets/neon/languages.svg
+          python3 scripts/bake-svg-animations.py assets/neon/system-stats.svg assets/neon/languages.svg
 
       - name: Strip the snake's progress bar
-        run: python3 scripts/strip-snake-progressbar.py assets/snake-hud.svg assets/neon/snake.svg
+        run: python3 scripts/strip-snake-progressbar.py assets/neon/snake.svg
 
       - name: Place calendar output
         run: |
           cp profile-3d-contrib/profile-neon.svg assets/neon/calendar-3d.svg
           python3 scripts/strip-calendar-pie.py assets/neon/calendar-3d.svg
-          cp profile-3d-contrib/profile-night-view.svg assets/contrib-3d.svg
           rm -rf profile-3d-contrib
 
       - name: Commit

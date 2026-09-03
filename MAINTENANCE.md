@@ -1,12 +1,4 @@
-# Profile README candidates
-
-Three styles to compare. Nothing is live yet — `README.md` on `main` is untouched.
-
-- [A — dark HUD, restrained](README-a-hud.md)
-- [B — full neon](README-b-neon.md)
-- [C — pure terminal](README-c-terminal.md)
-
-Pick one and it becomes `README.md`; the other two and their unused assets get deleted.
+# Maintenance notes
 
 ## Why the old stats card was unreliable
 
