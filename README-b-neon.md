@@ -2,7 +2,7 @@
 
 <img src="assets/banner-neon.svg" alt="Viktar Hushchynski, Senior Software Engineer" width="100%">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1200&color=00F0FF&center=true&vCenter=true&width=760&height=44&lines=Twenty+years+of+building+software.;Enterprise+systems+and+cloud+by+day.;Rust%2C+Go+and+Linux+tooling+by+night.;Firmware+when+a+project+calls+for+it." alt="" />
+<img src="assets/tagline-neon.svg" alt="Twenty years of building software" width="900">
 
 <br>
 
