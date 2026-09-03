@@ -9,10 +9,6 @@ on:
   schedule:
     - cron: "17 6 * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/profile-assets.yml
-      - scripts/bake-svg-animations.py
 
 permissions:
   contents: write
@@ -22,14 +18,23 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # A classic PAT with `repo` + `read:user` picks up private contributions in the
-  # counts. Without it the job still runs, on public data only.
-  GH_STATS_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+  # Required. A classic PAT with `repo` + `read:user`, stored as the PROFILE_TOKEN
+  # secret. The job's own GITHUB_TOKEN cannot reach the stats GraphQL API and comes
+  # back with "Resource not accessible by integration".
+  GH_STATS_TOKEN: ${{ secrets.PROFILE_TOKEN }}
 
 jobs:
   render:
     runs-on: ubuntu-latest
     steps:
+      - name: Require a PAT
+        run: |
+          if [ -z "${GH_STATS_TOKEN:-}" ]; then
+            echo "::error::PROFILE_TOKEN secret is not set. Create a classic PAT with" \
+                 "repo + read:user scopes and add it as the PROFILE_TOKEN repository secret."
+            exit 1
+          fi
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -78,6 +83,18 @@ jobs:
           get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
           get stats-neon.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
           get langs-neon.svg  "/api/top-langs?$user&layout=donut&langs_count=8&hide=html,css&$neon&custom_title=STACK"
+
+      - name: Reject error cards
+        run: |
+          set -euo pipefail
+          bad=0
+          for f in assets/stats-*.svg assets/langs-*.svg; do
+            if grep -q "Something went wrong" "$f"; then
+              echo "::error::$f rendered as an error card"
+              bad=1
+            fi
+          done
+          [ "$bad" = 0 ]
 
       - name: Bake animation end-states
         run: |
