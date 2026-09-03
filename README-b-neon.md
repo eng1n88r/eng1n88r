@@ -16,7 +16,7 @@
 
 <a href="https://battle-snakes.com"><img src="assets/neon/snake.svg" alt="Snake eating the contribution grid. Click for Battle Snakes." width="100%"></a>
 
-<img src="assets/neon/calendar.svg" alt="Contribution graph" width="100%">
+<img src="assets/neon/calendar-3d.svg" alt="Contribution graph" width="100%">
 
 <img src="assets/neon/system-stats.svg" alt="GitHub statistics">
 <img src="assets/neon/languages.svg" alt="Most used languages">
