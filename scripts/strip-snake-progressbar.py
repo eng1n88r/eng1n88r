@@ -20,7 +20,9 @@ def strip(svg):
     svg = re.sub(r'<rect\b[^>]*class="u u\d+"[^>]*/?>(?:</rect>)?', "", svg)
 
     # ...along with their styling and animations.
-    svg = re.sub(r'\.u\d*\s*\{[^}]*\}', "", svg)
+    # Segments are compound selectors (`.u.u0{...}`); eat the whole selector, or a
+    # dangling `.u` fuses onto the next rule and takes the snake's fill with it.
+    svg = re.sub(r'(?:\.u\d*)+\s*\{[^}]*\}', "", svg)
     svg = re.sub(r'@keyframes\s+u\d+\s*\{(?:[^{}]|\{[^{}]*\})*\}', "", svg)
 
     # Crop the canvas: the bar sat below the grid, so the box can end a margin
