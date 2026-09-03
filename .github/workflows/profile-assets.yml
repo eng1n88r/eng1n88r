@@ -46,6 +46,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ env.GH_STATS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/contrib-3d-neon.json
 
       - name: Contribution snake
         uses: Platane/snk/svg-only@v3
@@ -107,7 +108,7 @@ jobs:
 
       - name: Place calendar output
         run: |
-          cp profile-3d-contrib/profile-night-rainbow.svg assets/neon/contrib-3d.svg
+          cp profile-3d-contrib/profile-neon.svg assets/neon/calendar.svg
           cp profile-3d-contrib/profile-night-view.svg assets/contrib-3d.svg
           rm -rf profile-3d-contrib
 
