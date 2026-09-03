@@ -1,0 +1,101 @@
+name: Profile assets
+
+# Renders every image on the profile README into assets/ and commits the result.
+# The README then serves static files straight out of the repo, so nothing on the
+# profile depends on a third-party endpoint being awake, under its rate limit, or
+# still free to use.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/profile-assets.yml
+      - scripts/bake-svg-animations.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
+env:
+  # A classic PAT with `repo` + `read:user` picks up private contributions in the
+  # counts. Without it the job still runs, on public data only.
+  GH_STATS_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Contribution calendar
+        uses: yoshi389111/github-profile-3d-contrib@main
+        env:
+          GITHUB_TOKEN: ${{ env.GH_STATS_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ env.GH_STATS_TOKEN }}
+          outputs: |
+            assets/snake-hud.svg?color_snake=%235EEAD4&color_dots=%230d1117,%23134e4a,%230e7490,%2306b6d4,%235eead4
+            assets/snake-neon.svg?color_snake=%2300F0FF&color_dots=%23150a2e,%234c1d95,%237c3aed,%23c026d3,%23ff2e97
+
+      - name: Stat cards
+        env:
+          PAT_1: ${{ env.GH_STATS_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/anuraghazra/github-readme-stats.git /tmp/grs
+          npm --prefix /tmp/grs install --no-audit --no-fund --loglevel=error
+          node /tmp/grs/express.js &
+          for _ in $(seq 1 30); do
+            curl -sf -o /dev/null "http://127.0.0.1:9000/api?username=${{ github.repository_owner }}" && break
+            sleep 1
+          done
+
+          user="username=${{ github.repository_owner }}&count_private=true&include_all_commits=true"
+          dark="bg_color=0D1117&title_color=5EEAD4&text_color=C9D1D9&icon_color=A78BFA&border_color=1F2937"
+          light="bg_color=FFFFFF&title_color=0E7490&text_color=24292F&icon_color=6D28D9&border_color=D0D7DE"
+          neon="bg_color=05010D&title_color=FF2E97&text_color=B9C4D4&icon_color=00F0FF&border_color=2A1B4D"
+          stats="show_icons=true&hide=contribs&rank_icon=percentile"
+          langs="layout=compact&langs_count=8&hide=html,css"
+
+          get() { curl -sf --retry 3 --max-time 60 "http://127.0.0.1:9000$2" -o "assets/$1"; }
+          get stats-dark.svg  "/api?$user&$stats&$dark&custom_title=Signal"
+          get stats-light.svg "/api?$user&$stats&$light&custom_title=Signal"
+          get langs-dark.svg  "/api/top-langs?$user&$langs&$dark&custom_title=Languages"
+          get langs-light.svg "/api/top-langs?$user&$langs&$light&custom_title=Languages"
+          get stats-neon.svg  "/api?$user&$stats&$neon&custom_title=SYSTEM%20STATS"
+          get langs-neon.svg  "/api/top-langs?$user&layout=donut&langs_count=8&hide=html,css&$neon&custom_title=STACK"
+
+      - name: Bake animation end-states
+        run: |
+          python3 scripts/bake-svg-animations.py \
+            assets/stats-dark.svg assets/stats-light.svg assets/stats-neon.svg \
+            assets/langs-dark.svg assets/langs-light.svg assets/langs-neon.svg
+
+      - name: Place calendar output
+        run: |
+          cp profile-3d-contrib/profile-night-view.svg assets/contrib-3d.svg
+          cp profile-3d-contrib/profile-night-rainbow.svg assets/contrib-3d-neon.svg
+          rm -rf profile-3d-contrib
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --staged --quiet && echo "no change" && exit 0
+          git commit -m "chore: refresh profile assets"
+          git push
