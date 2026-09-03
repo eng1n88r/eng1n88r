@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200" role="img" aria-label="Viktar Hushchynski - Senior Software Engineer">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0E7490"/>
+      <stop offset="52%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0E7490" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#6D28D9" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6D28D9" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#E4E8EC" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="w" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="f"><rect width="1200" height="200" rx="10"/></clipPath>
+  </defs>
+  <g clip-path="url(#f)">
+    <rect width="1200" height="200" fill="#FFFFFF"/>
+    <rect width="1200" height="200" fill="url(#g)" opacity="0.6"/>
+    <ellipse cx="1000" cy="100" rx="430" ry="210" fill="url(#w)"/>
+    <rect x="0" y="0" width="1200" height="2" fill="#0E7490" opacity="0.12">
+      <animate attributeName="y" values="-6;204" dur="7s" repeatCount="indefinite"/>
+    </rect>
+
+    <g fill="none" stroke="#0E7490" stroke-width="1.6" opacity="0.45">
+      <path d="M18 44 V18 H52"/><path d="M1182 44 V18 H1148"/>
+      <path d="M18 156 V182 H52"/><path d="M1182 156 V182 H1148"/>
+    </g>
+
+    <g transform="translate(1042 100)" fill="none" stroke-linecap="round">
+      <circle r="62" stroke="#E4E8EC" stroke-width="1"/>
+      <circle r="46" stroke="#E4E8EC" stroke-width="1"/>
+      <circle r="30" stroke="#E4E8EC" stroke-width="1"/>
+      <g stroke="#0E7490" stroke-width="2.5" opacity="0.9">
+        <path d="M0 -62 A62 62 0 0 1 53.7 -31"/>
+        <path d="M0 62 A62 62 0 0 1 -53.7 31"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+      </g>
+      <g stroke="#6D28D9" stroke-width="2" opacity="0.85">
+        <path d="M-46 0 A46 46 0 0 1 -23 -39.8"/>
+        <path d="M46 0 A46 46 0 0 1 23 39.8"/>
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="12s" repeatCount="indefinite"/>
+      </g>
+      <circle r="5" fill="#1D4ED8" stroke="none">
+        <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+      <text x="64" y="50" font-size="13" letter-spacing="3.6" fill="#0E7490" opacity="0.8">&gt; whoami</text>
+      <text x="64" y="102" font-size="42" font-weight="700" letter-spacing="2.5" fill="url(#a)">VIKTAR HUSHCHYNSKI</text>
+      <rect x="64" y="118" width="600" height="1.5" fill="url(#r)"/>
+      <text x="64" y="146" font-size="14.5" letter-spacing="4" fill="#24292F">SENIOR SOFTWARE ENGINEER  //  20 YEARS</text>
+      <text x="64" y="170" font-size="13" letter-spacing="3.4" fill="#6E7781">CLOUD ARCHITECTURE  ·  DISTRIBUTED SYSTEMS  ·  FIRMWARE</text>
+    </g>
+  </g>
+</svg>

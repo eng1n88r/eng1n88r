@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-label="Viktar Hushchynski - Senior Software Engineer">
+  <defs>
+    <linearGradient id="n" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#FF2E97"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="45%" stop-color="#FF2E97"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF2E97" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.4" fill="#7DD3FC" opacity="0.05"/>
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="f"><rect width="1200" height="230" rx="10"/></clipPath>
+    <clipPath id="floor"><rect y="158" width="1200" height="72"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#f)">
+    <rect width="1200" height="230" fill="#05010D"/>
+    <ellipse cx="600" cy="150" rx="620" ry="200" fill="url(#halo)"/>
+
+    <circle cx="600" cy="162" r="72" fill="url(#sun)" opacity="0.5" filter="url(#softglow)"/>
+
+    <g clip-path="url(#floor)" stroke="url(#fade)" stroke-width="1" fill="none" opacity="1">
+      <line x1="600" y1="158" x2="-900" y2="230"/><line x1="600" y1="158" x2="-780" y2="230"/><line x1="600" y1="158" x2="-660" y2="230"/><line x1="600" y1="158" x2="-540" y2="230"/><line x1="600" y1="158" x2="-420" y2="230"/><line x1="600" y1="158" x2="-300" y2="230"/><line x1="600" y1="158" x2="-180" y2="230"/><line x1="600" y1="158" x2="-60" y2="230"/><line x1="600" y1="158" x2="60" y2="230"/><line x1="600" y1="158" x2="180" y2="230"/><line x1="600" y1="158" x2="300" y2="230"/><line x1="600" y1="158" x2="420" y2="230"/><line x1="600" y1="158" x2="540" y2="230"/><line x1="600" y1="158" x2="660" y2="230"/><line x1="600" y1="158" x2="780" y2="230"/><line x1="600" y1="158" x2="900" y2="230"/><line x1="600" y1="158" x2="1020" y2="230"/><line x1="600" y1="158" x2="1140" y2="230"/><line x1="600" y1="158" x2="1260" y2="230"/><line x1="600" y1="158" x2="1380" y2="230"/><line x1="600" y1="158" x2="1500" y2="230"/><line x1="600" y1="158" x2="1620" y2="230"/><line x1="600" y1="158" x2="1740" y2="230"/><line x1="600" y1="158" x2="1860" y2="230"/><line x1="600" y1="158" x2="1980" y2="230"/><line x1="600" y1="158" x2="2100" y2="230"/>
+      <line x1="0" y1="162.0" x2="1200" y2="162.0"/><line x1="0" y1="166.3" x2="1200" y2="166.3"/><line x1="0" y1="172.3" x2="1200" y2="172.3"/><line x1="0" y1="180.9" x2="1200" y2="180.9"/><line x1="0" y1="193.1" x2="1200" y2="193.1"/><line x1="0" y1="210.4" x2="1200" y2="210.4"/>
+    </g>
+    <line x1="0" y1="158" x2="1200" y2="158" stroke="#00F0FF" stroke-width="1.4" opacity="0.65" filter="url(#softglow)"/>
+
+    <rect width="1200" height="230" fill="url(#scan)"/>
+    <rect x="0" y="0" width="1200" height="26" fill="#00F0FF" opacity="0.07">
+      <animate attributeName="y" values="-30;230" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">
+      <text x="600" y="58" font-size="12.5" letter-spacing="7" fill="#00F0FF" opacity="0.85">SYSTEM ONLINE</text>
+
+      <g font-size="46" font-weight="700" letter-spacing="3">
+        <text x="597" y="112" fill="#FF2E97" opacity="0.85">
+          VIKTAR HUSHCHYNSKI
+          <animate attributeName="dx" values="0;-4;3;0;0;0;0;0;0;0" dur="4s" repeatCount="indefinite"/>
+        </text>
+        <text x="603" y="112" fill="#00F0FF" opacity="0.85">
+          VIKTAR HUSHCHYNSKI
+          <animate attributeName="dx" values="0;4;-3;0;0;0;0;0;0;0" dur="4s" repeatCount="indefinite"/>
+        </text>
+        <text x="600" y="112" fill="#F4F0FF" filter="url(#glow)">VIKTAR HUSHCHYNSKI</text>
+      </g>
+
+      <text x="600" y="200" font-size="13.5" letter-spacing="5" fill="#B9C4D4" opacity="0.95">SENIOR ENGINEER // CLOUD // SYSTEMS // FIRMWARE</text>
+    </g>
+  </g>
+</svg>
